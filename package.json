@@ -18,11 +18,17 @@
   },
   "keywords": [
     "electron",
-    "always-on-bottom",
-    "prevent-showdesktop",
-    "prevent-aeropeek",
+    "always on bottom",
+    "prevent showdesktop",
+    "prevent aeropeek",
+    "widget",
+    "windows",
     "ffi-napi"
   ],
+  "homepage": "https://github.com/lowfront/electget",
+  "bugs": {
+    "url": "https://github.com/lowfront/electget/issues"
+  },
   "author": {
     "name": "lowfront",
     "email": "lowfronterior@gmail.com"
@@ -37,7 +43,6 @@
     "@types/electron": "1.6.10",
     "@types/ffi-napi": "4.0.5",
     "@types/ref-napi": "3.0.4",
-    "@types/ref-struct-di": "1.1.6",
-    "electron": "17.1.2"
+    "@types/ref-struct-di": "1.1.6"
   }
 }
