@@ -13,7 +13,9 @@ This package provides features for widget creation of your Electron application.
 ## Install
 This package uses `ffi-napi`, so you must meet the [ffi-napi requirements](https://github.com/node-ffi-napi/node-ffi-napi#installation) before installation.
 
-`npm i electget`
+```
+npm i electget
+```
 
 ## Usage
 Electget is available in the Electron main process.
