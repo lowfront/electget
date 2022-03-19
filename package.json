@@ -1,0 +1,43 @@
+{
+  "name": "electget",
+  "version": "0.0.1",
+  "description": "Electron tools for creating Windows widgets that are fixed to desktop.",
+  "main": "dist/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js",
+    "default": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "always-on-bottom",
+    "prevent-showdesktop",
+    "prevent-aeropeek",
+    "ffi-napi"
+  ],
+  "author": {
+    "name": "lowfront",
+    "email": "lowfronterior@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ffi-napi": "4.0.3",
+    "ref-napi": "3.0.3",
+    "ref-struct-di": "1.1.1"
+  },
+  "devDependencies": {
+    "@types/electron": "1.6.10",
+    "@types/ffi-napi": "4.0.5",
+    "@types/ref-napi": "3.0.4",
+    "@types/ref-struct-di": "1.1.6",
+    "electron": "17.1.2"
+  }
+}
