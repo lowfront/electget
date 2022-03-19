@@ -5,6 +5,7 @@ import di from 'ref-struct-di';
 import {BrowserWindow} from 'electron';
 
 export const DWMWA_EXCLUDED_FROM_PEEK = 12;
+export const GWLP_HWNDPARENT = -8;
 
 const StructType = di(ref);
 
@@ -99,7 +100,7 @@ const electget = new class Electget {
   
     if (!defView) return false;
   
-    this.user32?.SetWindowLongPtrA(hWnd, -8, defView as any);
+    this.user32?.SetWindowLongPtrA(hWnd, GWLP_HWNDPARENT, defView as any);
   
     return true;
   }
@@ -107,7 +108,8 @@ const electget = new class Electget {
   cancelPreventFromShowDesktop(win: Win) {
     if (!this.user32) return false;
     const hWnd = getHWnd(win);
-    this.user32.SetWindowLongPtrA(hWnd, -8, this.user32.GetDesktopWindow() as any);
+    
+    this.user32.SetWindowLongPtrA(hWnd, GWLP_HWNDPARENT, this.user32.GetDesktopWindow() as any);
   }
 
   preventChangeZOrder(browserWindow: BrowserWindow) {
