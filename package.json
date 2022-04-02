@@ -1,6 +1,6 @@
 {
   "name": "electget",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Electron tools for creating Windows widgets that are fixed to desktop.",
   "main": "dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
@@ -36,6 +36,7 @@
   "license": "MIT",
   "dependencies": {
     "ffi-napi": "4.0.3",
+    "nswindow-napi": "0.0.3",
     "ref-napi": "3.0.3",
     "ref-struct-di": "1.1.1"
   },
