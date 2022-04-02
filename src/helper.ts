@@ -1,6 +1,7 @@
 import os from 'os';
 import { BrowserWindow } from 'electron';
-import { Win } from './ffi/windows';
+
+export type Win = BrowserWindow | Buffer;
 
 export function getHWnd(win: Win) {
   if (win instanceof BrowserWindow)

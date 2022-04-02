@@ -11,8 +11,7 @@ import {
 } from '../constants';
 import { BrowserWindow } from 'electron';
 import { getHWnd } from '../helper';
-
-export type Win = BrowserWindow | Buffer | number;
+import { Win } from '../helper';
 
 export const isWindows = process.platform === 'win32';
 
