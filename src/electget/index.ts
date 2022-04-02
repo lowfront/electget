@@ -1,7 +1,7 @@
 import { BrowserWindow } from 'electron';
-import { Win } from '../ffi/windows';
 import { WindowsModule } from './windows';
 import { MacModule } from './mac';
+import { Win } from '../helper';
 
 export interface ElectgetModule {
   preventFromAeroPeek(win: Win): boolean;

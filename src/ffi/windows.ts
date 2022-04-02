@@ -83,7 +83,7 @@ export function getSHELLDLL_DefViewHandle() {
   return defView as number;
 }
 
-export function setOwnerWindow(win: Win, target: Win) {
+export function setOwnerWindow(win: Win, target: Win | number) {
   if (!user32) return false;
   const hWnd = getHWnd(win);
   const targetWnd = getHWnd(target);

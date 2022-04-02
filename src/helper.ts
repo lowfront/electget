@@ -3,7 +3,7 @@ import { BrowserWindow } from 'electron';
 
 export type Win = BrowserWindow | Buffer;
 
-export function getHWnd(win: Win) {
+export function getHWnd(win: Win | number) {
   if (win instanceof BrowserWindow)
     return readBufferByOS(win.getNativeWindowHandle());
   else if (win instanceof Buffer) return readBufferByOS(win);

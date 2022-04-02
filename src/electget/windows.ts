@@ -7,9 +7,9 @@ import {
   getSHELLDLL_DefViewHandle,
   preventFromAeroPeek,
   setOwnerWindow,
-  Win,
   zOrderToBottom,
 } from '../ffi/windows';
+import { Win } from '../helper';
 
 export class WindowsModule implements ElectgetModule {
   preventFromAeroPeek(win: Win) {
