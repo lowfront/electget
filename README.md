@@ -4,11 +4,11 @@
 
 This package provides features for widget creation of your Electron application.
 
-- Prevent `BrowserWindow` from being hidden in ShowDesktop.
-- Prevent `BrowserWindow` from being minimized.
-- Prevent `BrowserWindow` from being hidden in AeroPeek.
-- Prevent changes in the `BrowserWindow` order.
-- Move `BrowserWindow` to the bottom of the windows.
+- [Windows, macOS] Prevent `BrowserWindow` from being hidden in ShowDesktop.
+- [Windows] Prevent `BrowserWindow` from being minimized.
+- [Windows] Prevent `BrowserWindow` from being hidden in AeroPeek.
+- [Windows] Prevent changes in the `BrowserWindow` order.
+- [Windows] Move `BrowserWindow` to the bottom of the windows.
 
 ## Install
 

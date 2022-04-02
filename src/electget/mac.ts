@@ -1,6 +1,12 @@
 import { BrowserWindow } from 'electron';
+import {
+  SetCollectionBehavior,
+  GetNSWindowCollectionBehaviorDefault,
+  GetNSWindowCollectionBehaviorCanJoinAllSpaces,
+  GetNSWindowCollectionBehaviorStationary,
+} from '../ffi/mac';
 import { ElectgetModule } from '.';
-import { Win } from '../ffi/windows';
+import { Win } from '../helper';
 
 export class MacModule implements ElectgetModule {
   preventFromAeroPeek(win: Win) {
@@ -8,12 +14,16 @@ export class MacModule implements ElectgetModule {
     return false;
   }
   preventFromShowDesktop(win: Win) {
-    throw new Error('It does not support OS other than Windows.');
-    return false;
+    SetCollectionBehavior(
+      win,
+      GetNSWindowCollectionBehaviorCanJoinAllSpaces() |
+        GetNSWindowCollectionBehaviorStationary()
+    );
+    return true;
   }
   cancelPreventFromShowDesktop(win: Win) {
-    throw new Error('It does not support OS other than Windows.');
-    return false;
+    SetCollectionBehavior(win, GetNSWindowCollectionBehaviorDefault());
+    return true;
   }
   preventChangeZOrder(browserWindow: BrowserWindow) {
     throw new Error('It does not support OS other than Windows.');
