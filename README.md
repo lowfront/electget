@@ -1,5 +1,9 @@
 # Electget
 
+<div align="center">
+  <img alt="electget" src="https://raw.githubusercontent.com/lowfront/electget/master/logo.svg" height="170px" />
+</div>
+
 `Electron` tools for creating Windows widgets that are fixed to desktop.
 
 This package provides features for widget creation of your Electron application.
