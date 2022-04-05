@@ -1,9 +1,9 @@
 # Electget
-
+<br>
 <div align="center">
   <img alt="electget" src="https://raw.githubusercontent.com/lowfront/electget/master/logo.svg" height="170px" />
 </div>
-
+<br>
 `Electron` tools for creating Windows widgets that are fixed to desktop.
 
 This package provides features for widget creation of your Electron application.
@@ -38,16 +38,16 @@ function createWindow() {
 
   loadWindow(win);
 
-  // Prevent BrowserWindow from being hidden in AeroPeek.
+  // [Windows] Prevent BrowserWindow from being hidden in AeroPeek.
   electget.preventFromAeroPeek(win);
 
-  // Prevent BrowserWindow from being hidden in ShowDesktop and minimized.
+  // [Windows, macOS] Prevent BrowserWindow from being hidden in ShowDesktop.
   electget.preventFromShowDesktop(win);
 
-  // Prevent changes in the BrowserWindow order.
+  // [Windows] Prevent changes in the BrowserWindow order.
   electget.preventChangeZOrder(win);
 
-  // Move BrowserWindow to the bottom of the windows
+  // [Windows] Move BrowserWindow to the bottom of the windows
   electget.moveToBottom(win);
 
   return win;
@@ -56,38 +56,38 @@ function createWindow() {
 
 ### Methods
 
-#### `alwaysOnBottom(browserWindow)`
+#### [`Windows`] alwaysOnBottom(browserWindow)
 
 - `win` BrowserWindow - Target BrowserWindow object.
 
 `BrowserWindow` is fixed to the bottom without being minimized.
 Apply `moveToBottom`, `preventChangeZOrder`, `preventFromShowDesktop` at once.
 
-#### `cancelAlwaysOnBottom(browserWindow)`
+#### [`Windows`] cancelAlwaysOnBottom(browserWindow)
 
 - `win` BrowserWindow - Target BrowserWindow object.
 
 Cancel of `alwaysOnBottom` method.
 
-#### `preventFromAeroPeek(win)`
+#### [`Windows`] preventFromAeroPeek(win)
 
 - `win` Buffer|BrowserWindow - Target BrowserWindow object or Buffer returned by getNativeWindowHandle.
 
 Prevent `BrowserWindow` from being hidden in AeroPeek.
 
-#### `preventFromShowDesktop(win)`
+#### [`Windows`, `macOS`] preventFromShowDesktop(win)
 
 - `win` Buffer|BrowserWindow - Target BrowserWindow object or Buffer returned by getNativeWindowHandle.
 
 Prevent `BrowserWindow` from being hidden in ShowDesktop and minimized.
 
-#### `cancelPreventFromShowDesktop(win)`
+#### [`Windows`, `macOS`] cancelPreventFromShowDesktop(win) [Windows, macOS]
 
 - `win` Buffer|BrowserWindow - Target BrowserWindow object or Buffer returned by getNativeWindowHandle.
 
 Cancel of `preventFromShowDesktop` method.
 
-#### `preventChangeZOrder(browserWindow)`
+#### [`Windows`] preventChangeZOrder(browserWindow)
 
 - `win` BrowserWindow - Target BrowserWindow object.
 
@@ -95,7 +95,7 @@ Returns `function` - Cancel of `preventChangeZOrder` method.
 
 Prevent changes in the `BrowserWindow` order.
 
-#### `cancelPreventChangeZOrder(browserWindow)`
+#### [`Windows`] cancelPreventChangeZOrder(browserWindow)
 
 - `win` BrowserWindow - Target BrowserWindow object.
 
@@ -103,7 +103,7 @@ Returns `function` - Cancel of `preventChangeZOrder` method.
 
 Cancel of `preventChangeZOrder` method.
 
-#### `moveToBottom(win)`
+#### [`Windows`] moveToBottom(win)
 
 - `win` Buffer|BrowserWindow - Target BrowserWindow object or Buffer returned by getNativeWindowHandle.
 
@@ -128,5 +128,5 @@ module.exports = {
 ## Roadmap
 
 - [ ] Method failure check.
-- [ ] Add MacOS support.
+- [x] Add MacOS support.
 - [ ] Add test code.

@@ -1,6 +1,6 @@
 {
   "name": "electget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Electron tools for creating Windows widgets that are fixed to desktop.",
   "main": "dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
@@ -23,6 +23,7 @@
     "prevent aeropeek",
     "widget",
     "windows",
+    "macOS",
     "ffi-napi"
   ],
   "homepage": "https://github.com/lowfront/electget",
