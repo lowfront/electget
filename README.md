@@ -4,9 +4,8 @@
   <img alt="electget" src="https://raw.githubusercontent.com/lowfront/electget/master/logo.svg" height="170px" />
 </div>
 <br>
-`Electron` tools for creating Windows widgets that are fixed to desktop.
 
-This package provides features for widget creation of your Electron application.
+`Electron` tools for creating Windows widgets that are fixed to desktop. This package provides features for widget creation of your Electron application.
 
 - [Windows, macOS] Prevent `BrowserWindow` from being hidden in ShowDesktop.
 - [Windows] Prevent `BrowserWindow` from being minimized.
