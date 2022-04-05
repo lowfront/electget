@@ -80,7 +80,7 @@ Prevent `BrowserWindow` from being hidden in AeroPeek.
 
 Prevent `BrowserWindow` from being hidden in ShowDesktop and minimized.
 
-#### [`Windows`, `macOS`] cancelPreventFromShowDesktop(win) [Windows, macOS]
+#### [`Windows`, `macOS`] cancelPreventFromShowDesktop(win)
 
 - `win` Buffer|BrowserWindow - Target BrowserWindow object or Buffer returned by getNativeWindowHandle.
 
